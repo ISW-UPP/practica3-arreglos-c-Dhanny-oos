@@ -4,51 +4,57 @@
 #include <iostream>
 
 using namespace std;
+int  principal(0);
+
+
 
 int main()
 {
     //Practica 3 - Arreglos
-    int arreglo[10];
-    int tamaño, i, A, mayor = 0;
-    double suma = 0;
+    //Orden inverso de 10 numeros
+    int arreglo[10]{};
 
-    for (i = 0; i < tamaño; i++) {
-        cout << "Da valor al lugar " << (i + 1) << ":";
+    for(int i = 0; i < 10; i++) {
+        cout << " Ingresa el valor: " << i << endl;
         cin >> arreglo[i];
-        if (arreglo[i] > mayor) {
-            mayor = arreglo[i];
-        }
     }
 
-    cout << endl;
-    cout << "Arreglo normal";
-
-    for (i = 0; i < tamaño; i++) {
-        cout << endl << "Componente " << (i + 1) << ":" << arreglo[i];
+    cout << " El vector de manera inversa es: \n " << endl;
+    for(int i = 9; i >= 0; i--)
+    {
+        cout << arreglo[i] << endl;
     }
+    return  0;
 
-    for (i = 0; i < tamaño / 2; i++) {
-        A = arreglo[i];
-        arreglo[i] = arreglo[tamaño - 1 - i];
-        arreglo[tamaño - 1 - i] = A;
+
+    //Calcular la media de 10 numeros
+    int arreglo[10]{};
+    int suma = 0;
+
+
+    for(int i = 0; i < 10; i++) {
+        cout << " Ingresa el valor: " << i << endl;
+        cin >> arreglo[i];
     }
-
-    cout << endl;
-    cout << endl;
-    cout << "Arreglo invertido";
-
-    for (i = 0; i < tamaño; i++) {
-        cout << endl << "Componente " << (i + 1) << ":" << arreglo[i];
-    }
-
-    for (i = 0; i < tamaño; i++) {
+    for(int i = 0; i < 10; i++) {
         suma += arreglo[i];
     }
 
-    cout << endl << endl << "La media es: " << suma * 1.0 / tamaño << endl;
-    cout << endl << endl << "El numero mayor del arreglo es: " << mayor;
-    return;
+    cout << " La media del arreglo es: " << suma * 1.0 / 10 << endl;
 
+
+    //Calcular el número mayor
+    int i = 0, arreglo[10]{}, mayor = 0;
+
+    for(i = 0; i < 10; i++) {
+        cout << " Ingresa el valor: " << i << endl;
+        cin >> arreglo[i];
+    }
+    if (arreglo[i] > principal) {
+        principal = arreglo[i];
+    }
+
+    cout << " El numero mayor dentro del vector es: " << mayor << endl;
 }
 
 // Ejecutar programa: Ctrl + F5 o menú Depurar > Iniciar sin depurar
